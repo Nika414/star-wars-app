@@ -1,0 +1,23 @@
+.navigation {
+    margin: 33px 10.9% 16px auto;
+}
+
+.navigation__list {
+    display: flex;
+    flex-direction: row;
+    gap: 74px;
+    margin: 0;
+}
+
+.navigation__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #F6F7F9;
+    padding-bottom: 15px;
+}
+
+.navigation__link_active {
+    border-bottom: 3px solid #CFDAB0;
+}

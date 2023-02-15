@@ -2,3 +2,26 @@
 @import url(./vendor/fonts/fonts.css);
 @import url(./vendor/variables.css);
 @import url(./root.css);
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+ul {
+  padding: 0
+}
+
+button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@import url(./Components/Header/Header.css);
+@import url(./Components/Navigation/Navigation.css);
+@import url(./Components/Intro/Intro.css);
