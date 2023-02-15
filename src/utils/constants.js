@@ -4,4 +4,6 @@ const routeName = {
   characters: '/characters',
 };
 
-export { routeName };
+const baseUrl = 'https://swapi.dev/api/people/';
+
+export { routeName, baseUrl };

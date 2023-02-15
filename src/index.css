@@ -25,3 +25,6 @@ button:hover {
 @import url(./Components/Header/Header.css);
 @import url(./Components/Navigation/Navigation.css);
 @import url(./Components/Intro/Intro.css);
+@import url(./Components/CardList/CardList.css);
+@import url(./Components/Card/Card.css);
+@import url(./Components/ShowMoreButton/ShowMoreButton.css);
