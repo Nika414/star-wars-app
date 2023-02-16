@@ -79,6 +79,15 @@
     align-items: center;
 }
 
+.card__info-item_place_popup {
+    background-color: white;
+    height: 70px;
+    width: 83px;
+    border-radius: 8px;
+    margin-right: 24px;
+    justify-content: center;
+}
+
 .card__tags-container {
     display: flex;
     gap: 13px;

@@ -1,6 +1,7 @@
 /* eslint-disable no-use-before-define */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import Api from '../utils/api';
+import { handleTags } from './utils';
 
 const api = new Api();
 export const getCards = createAsyncThunk('cards/getCards', async (loadNextPage, { dispatch }) => {
@@ -43,21 +44,21 @@ export const cardsSlice = createSlice({
   },
   reducers: {
     cardsSet(state, action) {
-      console.log(action.payload);
+      const cards = action.payload?.map((card) => handleTags(card));
       return {
         ...state,
-        cards: action.payload,
+        cards,
       };
     },
     cardsCountSet(state, action) {
-      console.log(action.payload);
       return {
         ...state,
         cardsCount: action.payload,
       };
     },
     cardsSetAdditional(state, action) {
-      state.cards.push(...action.payload);
+      const cards = action.payload?.map((card) => handleTags(card));
+      state.cards.push(...cards);
     },
     cardsLoaderToggler(state, action) {
       return {
@@ -81,6 +82,6 @@ export const cardsSlice = createSlice({
 });
 
 export const {
-  cardsSet, cardsCountSet, cardsDelete, cardsSetAdditional, cardsSetQuery, cardsLoaderToggler, nextPageLoaderToggler,
+  cardsSet, cardsCountSet, cardsSetAdditional, cardsLoaderToggler, nextPageLoaderToggler,
 } = cardsSlice.actions;
 export default cardsSlice.reducer;

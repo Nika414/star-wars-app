@@ -4,6 +4,7 @@ import { getCards } from '../../store/cardsSlice';
 export default function ShowMoreButton() {
   const dispatch = useDispatch();
   const isLoaded = useSelector((state) => state.cards.loader.nextPageLoader);
+
   function handleMoreCards() {
     dispatch(getCards(true));
   }

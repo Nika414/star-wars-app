@@ -2,7 +2,7 @@ import {
   Switch, Route, Redirect,
 } from 'react-router-dom';
 import { routeName } from '../../utils/constants';
-import CardList from '../CardList/CardList';
+import Characters from '../Characters/Characters';
 import Header from '../Header/Header';
 import Intro from '../Intro/Intro';
 
@@ -15,7 +15,7 @@ function App() {
           <Intro />
         </Route>
         <Route exact path={routeName.characters}>
-          <CardList />
+          <Characters />
         </Route>
         <Route path="*">
           <Redirect to={routeName.pageNotFound} />

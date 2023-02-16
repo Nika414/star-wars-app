@@ -1,0 +1,116 @@
+.card-popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+.card__popup_opened {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+}
+
+.card-popup__container {
+    height: 371px;
+    width: 800px;
+    background: linear-gradient(180deg, #17002F 42.19%, #1F2A63 100%);
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+
+.card-popup__close-button {
+    background-image: url(../../images/closeIcon.svg);
+    min-width: 32px;
+    min-height: 32px;
+    position: absolute;
+    top: -49px;
+    right: 0;
+    background-size: contain;
+    border: none;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-color: inherit;
+}
+
+.card-popup__image-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 365px;
+    background: #1F2A63;
+    box-shadow: 4px 4px 8px rgba(1, 28, 64, 0.2);
+    border-radius: 16px 0 0 16px;
+}
+
+.card-popup__image {
+    width: 265px;
+    margin: 38px 0 0 0;
+}
+
+.card-popup__info-block {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 365px);
+}
+
+.card-popup__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FDFDFD;
+    text-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+    margin: 30px 0 23px 13px;
+}
+
+.card-popup__tags-container {
+    width: 100%;
+    display: flex;
+    gap: 11px;
+    justify-content: flex-end;
+    padding: 35px 14px 0 0;
+    box-sizing: border-box;
+}
+
+.card-popup__additional-info {
+    display: flex;
+    flex-direction: column;
+    background: #FDFDFD;
+    box-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+    border-radius: 8px;
+    height: 104px;
+    width: 264px;
+    padding: 15px 0 0 23px;
+    gap: 7px;
+    margin: 0;
+    margin-left: 13px;
+}
+
+.card-popup__additional-info-item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.card-popup__info-container {
+    display: flex;
+    margin: 76px 0 25px 13px;
+}

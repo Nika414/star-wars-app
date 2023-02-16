@@ -13,7 +13,7 @@ export default class Api {
 
   getCards(loadNextPage) {
     const newPageNum = loadNextPage ? this._page + 1 : 1;
-    return fetch(`${this._baseUrl}?page=${newPageNum}&per_page=9`)
+    return fetch(`${this._baseUrl}?page=${newPageNum}`)
       .then((res) => this._handleResponse(res))
       .catch((err) => console.log(err));
   }
