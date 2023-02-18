@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import cardsReducer from './cardsSlice';
+// import filterReducer from './'
 
 export default configureStore({
   reducer: {

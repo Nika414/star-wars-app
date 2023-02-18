@@ -17,6 +17,16 @@
 
 }
 
-.characters__title_type_accent {
+.characters__title-accent {
     font-weight: 700;
+}
+
+.characters__span {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 100px 0;
+    display: block;
+    color: #000000;
 }

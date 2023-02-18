@@ -12,11 +12,9 @@ export default function Intro() {
       <h2 className="intro__subtitle">
         You can find out all the information about your favorite characters
       </h2>
-      <button className="intro__button" type="button">
-        <Link className="intro__link" to={routeName.characters}>
-          See more...
-        </Link>
-      </button>
+      <Link className="intro__button intro__link" to={routeName.characters}>
+        See more...
+      </Link>
       <img className="intro__pic" src={banner} alt="banner" />
     </section>
   );

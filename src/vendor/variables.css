@@ -1,6 +1,7 @@
 :root {
   --background: linear-gradient(180deg, #1F2A63 0%, #17002F 100%);
   --main-color: #1F2A63;
+  --color-yellow: #FFC107;
   --font-family-main: 'Karla';
   --font-family-additional: 'Roboto';
 }

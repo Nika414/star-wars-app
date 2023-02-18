@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+import { v4 as uuid } from 'uuid';
 import CardTag from '../CardTag';
 import male from '../../images/male.svg';
 import female from '../../images/female.svg';
@@ -22,7 +24,7 @@ export default function CardPopup({ card, isPopupOpen, onClose }) {
         <div className="card-popup__image-block">
           <img className="card-popup__image" src={renderImage()} alt="icon" />
           <div className="card-popup__tags-container">
-            {card.tags.map((tag) => <CardTag info={tag.info} color={tag.color} />)}
+            {card.tags.map((tag) => <CardTag key={uuid()} info={tag.info} color={tag.color} />)}
           </div>
         </div>
         <div className="card-popup__info-block">

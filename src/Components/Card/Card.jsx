@@ -1,6 +1,8 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable consistent-return */
+import { v4 as uuid } from 'uuid';
 import CardTag from '../CardTag';
 import CardInfo from '../CardInfo';
 
@@ -17,7 +19,7 @@ export default function Card({ card, onClick }) {
         <CardInfo name="mass" value={card.mass} />
       </div>
       <div className="card__tags-container">
-        {card.tags.map((tag) => <CardTag info={tag.info} color={tag.color} />)}
+        {card.tags.map((tag) => <CardTag key={uuid()} info={tag.info} color={tag.color} />)}
       </div>
     </li>
   );
