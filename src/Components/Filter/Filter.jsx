@@ -1,37 +1,42 @@
 /* eslint-disable no-debugger */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-use-before-define */
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { MultiSelect } from 'react-multi-select-component';
 import { filterStatusChanged } from '../../store/filterSlice';
 
 export default function Filter() {
-  const eyeColors = useSelector((state) => state.cards.cards.map((item) => item.eye_color));
+  const [initState, setInitState] = useState(true);
+  const eyeColors = useSelector((state) =>
+    state.cards.cards.map((item) => item.eye_color)
+  );
+  const options = Array.from(new Set(eyeColors)).map((item) => ({
+    label: item,
+    value: item,
+  }));
 
   const [selected, setSelected] = useState([]);
   const dispatch = useDispatch();
 
   function onChange(data) {
+    if (initState) {
+      setInitState(false);
+    }
+    if (data.length === 0) {
+      setInitState(true);
+    }
     setSelected(data);
     dispatch(filterStatusChanged(data.map((item) => item.value)));
   }
-
-  useEffect(() => {
-    if (eyeColors.length > 1) {
-      const uniqueEyeColors = Array.from(new Set(eyeColors));
-      const options = uniqueEyeColors.map((item) => ({ label: item, value: item }));
-      setSelected(options);
-    }
-  }, [eyeColors]);
 
   return (
     <div className="filter">
       <span className="filter__name">Color eye</span>
       <MultiSelect
-        options={selected}
+        options={options}
         disableSearch
-        value={selected}
+        value={initState ? options : selected}
         onChange={onChange}
         labelledBy="Select"
         className="filter__menu"
