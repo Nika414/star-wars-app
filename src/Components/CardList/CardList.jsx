@@ -6,9 +6,17 @@ import Card from '../Card/Card';
 
 export default function CardList({ onCardClick }) {
   const cards = useSelector((state) => state.cards.cards);
+  const filterColors = useSelector((state) => state.filter.filter.colors);
+
+  function filterCards() {
+    if (filterColors.length === 0) {
+      return cards;
+    } return cards.filter((card) => filterColors.includes(card.eye_color));
+  }
+
   return (
     <ul className="card-list">
-      {cards.map((card) => (<Card card={card} key={uuid()} onClick={onCardClick} />))}
+      {filterCards().map((card) => (<Card card={card} key={uuid()} onClick={onCardClick} />))}
     </ul>
   );
 }

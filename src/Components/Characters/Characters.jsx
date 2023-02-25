@@ -31,7 +31,7 @@ export default function Characters() {
     setSelectedCard(undefined);
   }
 
-  function render() {
+  function renderCardList() {
     if (!isLoaded) {
       return <Preloader />;
     }
@@ -40,6 +40,7 @@ export default function Characters() {
     }
     return <CardList onCardClick={handlePopupOpen} />;
   }
+
   return (
     <section className="characters">
       <h2 className="characters__title">
@@ -49,7 +50,7 @@ export default function Characters() {
         for you to choose your favorite
       </h2>
       <Filter />
-      {render()}
+      {renderCardList()}
       {cards.length < cardsCount && <ShowMoreButton />}
       {selectedCard && (<CardPopup card={selectedCard} isPopupOpen={isPopupOpen} onClose={handlePopupClose} />) }
     </section>

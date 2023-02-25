@@ -21,7 +21,7 @@ button:hover {
   opacity: 0.8;
   cursor: pointer;
 }
-
+@import url(./Components/App/App.css);
 @import url(./Components/Header/Header.css);
 @import url(./Components/Navigation/Navigation.css);
 @import url(./Components/Intro/Intro.css);
@@ -32,3 +32,4 @@ button:hover {
 @import url(./Components/Card/Card.css);
 @import url(./Components/ShowMoreButton/ShowMoreButton.css);
 @import url(./Components/CardPopup/CardPopup.css);
+@import url(./Components/PageNotFound/PageNotFound.css);

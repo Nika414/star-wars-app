@@ -1,34 +1,47 @@
+/* eslint-disable no-debugger */
 /* eslint-disable no-unused-vars */
-/* eslint-disable import/no-extraneous-dependencies */
-import { useState } from 'react';
-import { v4 as uuid } from 'uuid';
-import { Menu, MenuItem, MenuButton } from '@szhsin/react-menu';
-import { useSelector } from 'react-redux';
+/* eslint-disable no-use-before-define */
+import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { MultiSelect } from 'react-multi-select-component';
+import { filterStatusChanged } from '../../store/filterSlice';
 
 export default function Filter() {
-  const cards = useSelector((state) => state.cards.cards);
-  const eyeColor = Array.from(new Set(cards.map((card) => card.eye_color)));
+  const eyeColors = useSelector((state) => state.cards.cards.map((item) => item.eye_color));
 
-  const [isChecked, setIsChecked] = useState(undefined);
+  const [selected, setSelected] = useState([]);
+  const dispatch = useDispatch();
+
+  function onChange(data) {
+    setSelected(data);
+    dispatch(filterStatusChanged(data.map((item) => item.value)));
+  }
+
+  useEffect(() => {
+    if (eyeColors.length > 1) {
+      const uniqueEyeColors = Array.from(new Set(eyeColors));
+      const options = uniqueEyeColors.map((item) => ({ label: item, value: item }));
+      setSelected(options);
+    }
+  }, [eyeColors]);
+
   return (
     <div className="filter">
       <span className="filter__name">Color eye</span>
-      <Menu
+      <MultiSelect
+        options={selected}
+        disableSearch
+        value={selected}
+        onChange={onChange}
+        labelledBy="Select"
         className="filter__menu"
-        menuButton={<MenuButton className="filter__menu-button">All</MenuButton>}
-        transition
-      >
-        {eyeColor.map((color) => (
-          <MenuItem
-            type="checkbox"
-            key={uuid()}
-            className="filter__menu-item"
-            onClick={() => console.log(1)}
-          >
-            {color}
-          </MenuItem>
-        ))}
-      </Menu>
+        isLoading={eyeColors.length === 0}
+        overrideStrings={{
+          allItemsAreSelected: 'All',
+          selectAll: 'All',
+          selectSomeItems: 'Select',
+        }}
+      />
     </div>
   );
 }

@@ -16,33 +16,32 @@
     margin-right: 18px;
 }
 
-.filter__menu-button {
-    background: #F2F2F2;
-    box-shadow: 2px 2px 2px rgba(33, 33, 33, 0.1);
-    border: none;
-    border-radius: 4px;
+.filter__menu {
+    width: 135px !important;
+    text-align: center !important;
 }
 
-.szh-menu--dir-bottom {
-    background: #F2F2F2;
-    box-shadow: 4px 4px 8px rgba(1, 28, 64, 0.2);
-    border-radius: 8px;
-    position: relative !important;
-    margin-top: 9px !important;
-    z-index: 10;
-    padding: 20px !important;
+/* important используется в соответствии с документацией пакета  react-multi-select-component */
+
+.rmsc {
+    --rmsc-gray: black !important;
+    --rmsc-bg: #F2F2F2 !important;
+    --rmsc-h: 23px !important;
+    --rmsc-hover: #07D6F2 !important;
+    --rmsc-selected: #07D6F2 !important;
 }
 
-.filter__menu-item {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #000000;
-    padding: 3px 0;
+.rmsc .dropdown-container {
+    border: none !important;
+    box-shadow: inset 0px -2px 0px rgb(0 0 0 / 18%) !important;
+    border-radius: 4px !important;
 }
 
-.filter__menu-item:checked {
-    color: red;
+.rmsc .dropdown-heading {
+    cursor: pointer !important;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
 }
