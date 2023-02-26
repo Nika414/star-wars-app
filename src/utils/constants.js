@@ -1,5 +1,5 @@
 const routeName = {
-  home: '/',
+  home: '/star-wars-app',
   pageNotFound: '/404',
   characters: '/characters',
 };
