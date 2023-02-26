@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.f0455e3d.css",
-    "main.js": "/static/js/main.36617ca6.js",
-    "static/media/banner.svg": "/static/media/banner.0d3af74ee80d734b5716f9d553ea7bf7.svg",
-    "static/media/Logo.svg": "/static/media/Logo.f9db6d2e5833fc67689ea12436bb36e6.svg",
-    "static/media/SourceSansPro-Regular.ttf": "/static/media/SourceSansPro-Regular.df87f53caf449a3b7572.ttf",
-    "static/media/Ship.png": "/static/media/Ship.4f71528206a4eed683f0.png",
-    "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
-    "static/media/male.svg": "/static/media/male.028fc1dac910ccf4ba640bacb00824ad.svg",
-    "static/media/female.svg": "/static/media/female.cfb70e7bb52d430f3332622e9dbcbceb.svg",
-    "static/media/hermaphrodite.svg": "/static/media/hermaphrodite.19b7ec367727e118aab721ca5cea04d9.svg",
-    "static/media/Karla-Bold.ttf": "/static/media/Karla-Bold.623c61b6f8c6529800b2.ttf",
-    "static/media/Karla-Regular.ttf": "/static/media/Karla-Regular.fa3a282cea1a68f3717d.ttf",
-    "index.html": "/index.html",
-    "static/media/closeIcon.svg": "/static/media/closeIcon.ed70579d3bb9c7c27242.svg",
-    "main.f0455e3d.css.map": "/static/css/main.f0455e3d.css.map",
-    "main.36617ca6.js.map": "/static/js/main.36617ca6.js.map"
+    "main.css": "/star-wars-app/static/css/main.9f8aec50.css",
+    "main.js": "/star-wars-app/static/js/main.37618d97.js",
+    "static/media/banner.svg": "/star-wars-app/static/media/banner.0d3af74ee80d734b5716f9d553ea7bf7.svg",
+    "static/media/Logo.svg": "/star-wars-app/static/media/Logo.f9db6d2e5833fc67689ea12436bb36e6.svg",
+    "static/media/SourceSansPro-Regular.ttf": "/star-wars-app/static/media/SourceSansPro-Regular.df87f53caf449a3b7572.ttf",
+    "static/media/Ship.png": "/star-wars-app/static/media/Ship.4f71528206a4eed683f0.png",
+    "static/media/Roboto-Regular.ttf": "/star-wars-app/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
+    "static/media/male.svg": "/star-wars-app/static/media/male.028fc1dac910ccf4ba640bacb00824ad.svg",
+    "static/media/female.svg": "/star-wars-app/static/media/female.cfb70e7bb52d430f3332622e9dbcbceb.svg",
+    "static/media/hermaphrodite.svg": "/star-wars-app/static/media/hermaphrodite.19b7ec367727e118aab721ca5cea04d9.svg",
+    "static/media/Karla-Bold.ttf": "/star-wars-app/static/media/Karla-Bold.623c61b6f8c6529800b2.ttf",
+    "static/media/Karla-Regular.ttf": "/star-wars-app/static/media/Karla-Regular.fa3a282cea1a68f3717d.ttf",
+    "index.html": "/star-wars-app/index.html",
+    "static/media/closeIcon.svg": "/star-wars-app/static/media/closeIcon.ed70579d3bb9c7c27242.svg",
+    "main.9f8aec50.css.map": "/star-wars-app/static/css/main.9f8aec50.css.map",
+    "main.37618d97.js.map": "/star-wars-app/static/js/main.37618d97.js.map"
   },
   "entrypoints": [
-    "static/css/main.f0455e3d.css",
-    "static/js/main.36617ca6.js"
+    "static/css/main.9f8aec50.css",
+    "static/js/main.37618d97.js"
   ]
 }
