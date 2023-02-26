@@ -16,6 +16,10 @@
     margin: 0;
 }
 
+.intro__span {
+    font-weight: 400;
+}
+
 .intro__subtitle {
     width: 35.76%;
     font-style: normal;

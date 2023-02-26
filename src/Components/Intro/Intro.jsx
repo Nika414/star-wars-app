@@ -6,8 +6,11 @@ export default function Intro() {
   return (
     <section className="intro">
       <h1 className="intro__title">
-        Find all your
-        favorite character
+        Find
+        <span className="intro__span">
+          {' all your favorite '}
+        </span>
+        character
       </h1>
       <h2 className="intro__subtitle">
         You can find out all the information about your favorite characters
