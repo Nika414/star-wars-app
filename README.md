@@ -1,9 +1,9 @@
 # StarWars. Find all your favorite characters.
 
-Приложение для просмотра информации о героях Звездных воин. Сделана на основе [Swapi](https://swapi.dev/).
+Приложение для просмотра информации о героях Звездных воин. Сделано на основе [Swapi](https://swapi.dev/).
 
 ## Ссылка на GitHub pages
-[Ссылка на GitHub pages](https://nika414.github.io/catstagram/)
+[Ссылка на GitHub pages](https://nika414.github.io/star-wars-app)
 
 ## Обзор
 * Приложение содержит 3 страницы: 
