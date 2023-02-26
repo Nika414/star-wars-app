@@ -1,27 +1,30 @@
 .intro {
     position: relative;
     padding: 0 0 246px 0;
+    font-size: 23px;
 }
 
 .intro__title {
     width: 35.14%;
     font-style: normal;
     font-weight: 700;
-    font-size: 72px;
-    line-height: 84px;
+    font-size: 3.13em;
+    line-height: 1.16;
     letter-spacing: 4px;
     color: #FFFFFF;
-    margin: 128px 0 64px 10.9%;
+    padding: 128px 0 64px 10.9%;
+    margin: 0;
 }
 
 .intro__subtitle {
     width: 35.76%;
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 37px;
+    font-size: 1.39em;
+    line-height: 1.16;
     color: #FFFFFF;
-    margin: 0 0 64px 10.9%;
+    padding: 0 0 64px 10.9%;
+    margin: 0;
 }
 
 .intro__pic {
@@ -35,12 +38,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 231px;
+    width: 16%;
     height: 66px;
+    box-sizing: border-box;
     font-style: normal;
     font-weight: 700;
-    font-size: 23px;
-    line-height: 27px;
+    line-height: 1.16;
     text-align: center;
     color: #212121;
     background: var(--color-yellow);
@@ -48,4 +51,66 @@
     border-radius: 11px;
     border: none;
     margin: 0 0 0 10.9%;
+}
+
+@media screen and (max-width: 1280px) {
+    .intro {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .intro {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .intro {
+        padding: 0 0 150px 0;
+    }
+
+    .intro__title {
+        letter-spacing: 2px;
+        color: #FFFFFF;
+        padding: 80px 0 40px 10.9%;
+    }
+
+    .intro__pic {
+        top: 0;
+    }
+
+    .intro__link {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .intro {
+        font-size: 10px;
+    }
+
+    .intro__title {
+        padding: 40px 0 20px 10.9%;
+    }
+
+    .intro__link {
+        height: 40px;
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .intro {
+        font-size: 6px;
+    }
+
+    .intro__title {
+        padding: 30px 0 10px 10.9%;
+    }
+
+
+    .intro__subtitle {
+        padding: 0 0 30px 10.9%;
+    }
 }

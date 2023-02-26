@@ -4,13 +4,21 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    background: #17002F;
+}
+
+.page-not-found__container {
+    margin: 83px 0 120px 0;
+    width: fit-content;
+    position: relative;
 }
 
 .page-not-found__span {
+    font-family: 'Karla';
     font-style: normal;
     font-weight: 700;
-    font-size: 700px;
-    line-height: 818px;
+    font-size: 48.6vw;
+    line-height: 1;
     display: flex;
     align-items: center;
     letter-spacing: 4px;
@@ -18,11 +26,11 @@
 }
 
 .page-not-found__img {
-    height: 623px;
-    width: 690px;
+    width: 53.9%;
     position: absolute;
-    top: 120px;
-    left: 375px;
+    top: 9%;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .page-not-found__button {
@@ -36,4 +44,5 @@
     font-size: 23px;
     line-height: 27px;
     color: #212121;
+    margin: 0 0 83px 0;
 }

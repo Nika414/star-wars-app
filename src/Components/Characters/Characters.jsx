@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-debugger */
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import CardList from '../CardList/CardList';

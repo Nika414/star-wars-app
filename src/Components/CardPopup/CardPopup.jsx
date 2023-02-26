@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { v4 as uuid } from 'uuid';
 import CardTag from '../CardTag';
 import male from '../../images/male.svg';

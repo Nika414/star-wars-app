@@ -21,6 +21,7 @@ button:hover {
   opacity: 0.8;
   cursor: pointer;
 }
+
 @import url(./Components/App/App.css);
 @import url(./Components/Header/Header.css);
 @import url(./Components/Navigation/Navigation.css);

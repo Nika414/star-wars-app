@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import Api from '../utils/api';
 import { handleTags } from './utils';
@@ -9,7 +8,6 @@ export const getCards = createAsyncThunk('cards/getCards', async (loadNextPage, 
     try {
       dispatch(nextPageLoaderToggler(false));
       const result = await api.getCards(loadNextPage);
-      console.log(result);
       dispatch(cardsSetAdditional(result.results));
       dispatch(cardsCountSet(result.count));
     } catch (err) {
@@ -21,7 +19,6 @@ export const getCards = createAsyncThunk('cards/getCards', async (loadNextPage, 
     try {
       dispatch(cardsLoaderToggler(false));
       const result = await api.getCards(loadNextPage);
-      console.log(result);
       dispatch(cardsCountSet(result.count));
       dispatch(cardsSet(result.results));
     } catch (err) {

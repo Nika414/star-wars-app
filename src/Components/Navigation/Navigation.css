@@ -13,11 +13,31 @@
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
-    line-height: 29px;
+    line-height: 1.16;
     color: #F6F7F9;
     padding-bottom: 15px;
 }
 
 .navigation__link_active {
     border-bottom: 3px solid #CFDAB0;
+}
+
+@media screen and (max-width: 1024px) {
+    .navigation__link {
+        font-size: 20px;
+    }
+
+    .navigation__list {
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navigation__link {
+        font-size: 14px;
+    }
+
+    .navigation__list {
+        gap: 20px;
+    }
 }
