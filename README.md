@@ -3,7 +3,7 @@
 Приложение для просмотра информации о героях Звездных воин. Сделано на основе [Swapi](https://swapi.dev/).
 
 ## Ссылка на GitHub pages
-[Ссылка на GitHub pages](https://nika414.github.io/star-wars-app)
+[Ссылка на GitHub pages](https://nika414.github.io/star-wars-app/#/)
 
 ## Обзор
 * Приложение содержит 3 страницы: 
@@ -20,8 +20,8 @@
 * React router - Switch, Route, Redirect, useLocation, Link, NavLink, useHistory
 * Redux-toolkit.
 * CSS (адаптивная верстка).
-* React-multi-select-component
-* @testing-library/jest-dom
+* React-multi-select-component.
+* @testing-library/jest-dom.
 
 ## Установка и запуск
 ### Требования:
