@@ -48,7 +48,6 @@ const onClick = jest.fn();
 describe('Card component', () => {
   it('Card renders', () => {
     render(<Card card={data} />);
-
     expect(screen.getByText('Luke Skywalker')).toBeInTheDocument();
   });
   it('Card snapshot', () => {
@@ -57,7 +56,12 @@ describe('Card component', () => {
   });
   it('onChange works', () => {
     render(<Card card={data} onClick={onClick} />);
-    field.simulate('click');
+
+    userEvent.type(screen.getByRole('presentation'));
     expect(onClick).toHaveBeenCalled();
+  });
+  it('styles works', () => {
+    render(<Card card={data} onClick={onClick} />);
+    expect(screen.getByRole('heading')).toHaveClass('card__title');
   });
 });

@@ -12,6 +12,7 @@ function App() {
   const isHeaderRequired = location.pathname !== routeName.pageNotFound;
 
   return (
+
     <div className="App">
       {isHeaderRequired && <Header />}
       <Switch>
@@ -29,6 +30,7 @@ function App() {
         </Route>
       </Switch>
     </div>
+
   );
 }
 
