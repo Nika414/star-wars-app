@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import userEvent from '@testing-library/user-event';
 import Card from './Card';
 
 const data = {
@@ -41,6 +42,9 @@ const data = {
     },
   ],
 };
+
+const onClick = jest.fn();
+
 describe('Card component', () => {
   it('Card renders', () => {
     render(<Card card={data} />);
@@ -50,5 +54,10 @@ describe('Card component', () => {
   it('Card snapshot', () => {
     const card = render(<Card card={data} />);
     expect(card).toMatchSnapshot();
+  });
+  it('onChange works', () => {
+    render(<Card card={data} onClick={onClick} />);
+    field.simulate('click');
+    expect(onClick).toHaveBeenCalled();
   });
 });

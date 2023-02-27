@@ -5,6 +5,7 @@
     align-items: center;
     position: relative;
     background: #17002F;
+    min-height: 100vh;
 }
 
 .page-not-found__container {
@@ -45,4 +46,10 @@
     line-height: 27px;
     color: #212121;
     margin: 0 0 83px 0;
+}
+
+@media screen and (max-width: 560px) {
+    .page-not-found__button {
+        width: 60%;
+    }
 }
