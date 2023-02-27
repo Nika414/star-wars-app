@@ -131,6 +131,7 @@
     .intro__pic {
         position: relative;
         margin: 100px;
+        width: 80%;
     }
 
     .intro__link {
